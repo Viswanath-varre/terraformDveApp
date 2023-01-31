@@ -3,5 +3,5 @@ resource "random_string" "myrandom" {
   length = 5
   upper = true 
   special = false
-  number = true   
+  numeric = true   
 }
