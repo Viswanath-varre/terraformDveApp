@@ -27,4 +27,3 @@ provider "azurerm" {
 }
 
 
-#the comment is added
