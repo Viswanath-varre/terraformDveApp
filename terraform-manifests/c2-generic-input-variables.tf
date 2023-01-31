@@ -19,6 +19,9 @@ variable "resource_group_name" {
   default = "rg-myRG"  
 }
 
+#commited for change to test
+
+
 # Azure Resources Location
 variable "resource_group_location" {
   description = "Region in which Azure Resources to be created"
