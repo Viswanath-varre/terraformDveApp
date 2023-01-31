@@ -16,7 +16,7 @@ variable "environment" {
 variable "resource_group_name" {
   description = "Resource Group Name"
   type = string
-  default = "rg-myRG"  
+  default = "rg-default"  
 }
 
 #commited for change to test

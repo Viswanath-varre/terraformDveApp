@@ -6,5 +6,8 @@ resource "azurerm_public_ip" "web_linuxvm_publicip" {
   allocation_method = "Static"
   sku = "Standard"
   
+  depends_on = [
+    azurerm_resource_group.rg
+  ]
 }
 

@@ -4,6 +4,10 @@ resource "azurerm_subnet" "appsubnet" {
   resource_group_name  = azurerm_resource_group.rg.name
   virtual_network_name = azurerm_virtual_network.vnet.name
   address_prefixes     = var.app_subnet_address  
+
+  depends_on = [
+    azurerm_resource_group.rg
+  ]
 }
 
 # Resource-2: Create Network Security Group (NSG)
@@ -11,6 +15,10 @@ resource "azurerm_network_security_group" "app_subnet_nsg" {
   name                = "${azurerm_subnet.appsubnet.name}-nsg"
   location            = azurerm_resource_group.rg.location
   resource_group_name = azurerm_resource_group.rg.name
+
+  depends_on = [
+    azurerm_resource_group.rg
+  ]
 }
 
 # Resource-3: Associate NSG and Subnet
